@@ -10,7 +10,7 @@ using namespace std;
     int id;
     float GPA;
   };
-vector<student> toAdd(vector<student*>* list);
+void toAdd(vector<student*>* list);
 void toDelete(vector<student*>* list);
 void toPrint(vector<student*>* list);
 int main(){
@@ -34,22 +34,20 @@ int main(){
 }
   
 void toAdd(vector<student*>* list){
-  student* stu;
+                  
+  student* stu = new student;
   int n,i;
   cout << "What a test!" << endl;
   cout << "How many students would you like to enter?" << endl;
-  cin >> n;
-  stud = new stu[n+1];
-  for (i = 0; i < n; i++) {
     cout << "First Name: ";
-    cin.getline(stu[i].name,20);
+    cin.getline(stu -> name,20);
     cout << "Last Name: ";
-    cin.getline(stu[i].lname,20);
+    cin.getline(stu -> lname,20);
     cout << "ID: ";
-    cin.getline(stu[i].id);
+    cin.getline(stu -> id);
     cout << "GPA: ";
-    cin.getline(stu[i].GPA);
-    list -> push_back(stu[i]);
+    cin.getline(stu -> GPA);
+    list -> push_back(stu);
   }
 }
 void toDelete(){
